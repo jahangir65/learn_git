@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="my_app" ng-controller="HelloController">
+   
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+   </head>
+   
+   <body>
+      <div>
+         <label>Name:</label>
+         <input type = "text" ng-model = "yourName" placeholder = "Enter a name here">
+         <hr />
+         
+         <h1>Hello {{yourName}}!</h1>
+         <h1>{{yourName}} {{yourName}}!</h1>
+      </div>
+
+
+
+<script>
+ angular.module("my_app", [])
+         
+         .controller("HelloController", function($scope) {
+            $scope.yourName = "Arun";
+            
+         }); 
+
+</script>      
+   </body>
+</html>
+
